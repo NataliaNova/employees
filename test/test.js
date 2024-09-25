@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../index'); // Asegúrate de que la ruta sea correcta
+const app = require('../index'); 
 
 describe('API Routes', () => {
   let expect;
@@ -24,7 +24,7 @@ describe('API Routes', () => {
   });
 
   it('should return employee by name', (done) => {
-    const name = 'Sue'; // Asegúrate de que este nombre exista en tu archivo employees.json
+    const name = 'Sue'; 
     request(app)
       .get(`/employees/name/${name}`)
       .expect(200)
